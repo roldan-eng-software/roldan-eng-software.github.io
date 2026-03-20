@@ -6,13 +6,13 @@ import { differentials } from '@/lib/constants'
 
 export default function Differentials() {
   return (
-    <section className="py-20 px-4 bg-slate-900/50">
+    <section className="py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8 bg-slate-900/50">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center text-white mb-4"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-4"
         >
           Por que me escolher?
         </motion.h2>
@@ -22,12 +22,12 @@ export default function Differentials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-gray-400 text-center mb-12 max-w-2xl mx-auto"
+          className="text-gray-400 text-center mb-8 md:mb-12 max-w-2xl mx-auto"
         >
           Não sou developer genérico. Cada diferencial é uma capacidade real que você pode usar.
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {differentials.map((differential, index) => (
             <DifferentialCard key={differential.id} differential={differential} index={index} />
           ))}

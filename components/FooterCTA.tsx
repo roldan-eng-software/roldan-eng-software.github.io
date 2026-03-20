@@ -80,27 +80,27 @@ function SocialIcon({ icon }: { icon: string }) {
 
 export default function FooterCTA() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
             Pronto para começar seu projeto?
           </h2>
-          <p className="text-gray-400 mb-8">Respondo em até 24h</p>
+          <p className="text-gray-400 mb-6 md:mb-8">Respondo em até 24h</p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <motion.a
               href="https://calendly.com/seu-username"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
             >
               Agendar Reunião
             </motion.a>
@@ -108,7 +108,7 @@ export default function FooterCTA() {
               href="mailto:seu-email@example.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
+              className="px-6 md:px-8 py-3 md:py-4 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
             >
               Enviar Email
             </motion.a>
@@ -119,11 +119,11 @@ export default function FooterCTA() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
-          <p className="text-center text-gray-500 text-sm mb-8">20+ clientes satisfeitos</p>
+          <p className="text-center text-gray-500 text-sm mb-6 md:mb-8">20+ clientes satisfeitos</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
             ))}
@@ -135,7 +135,7 @@ export default function FooterCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="flex justify-center gap-6 mb-12"
+          className="flex justify-center gap-4 md:gap-6 mb-8 md:12"
         >
           {socialLinks.map(link => (
             <motion.a
@@ -144,17 +144,17 @@ export default function FooterCTA() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2, rotate: 360 }}
-              className="w-12 h-12 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-500/50 transition-all duration-300"
+              className="w-10 md:w-12 h-10 md:h-12 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-500/50 transition-all duration-300"
             >
               <SocialIcon icon={link.icon} />
             </motion.a>
           ))}
         </motion.div>
 
-        <div className="border-t border-slate-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-slate-800 pt-6 md:pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
             <p className="text-gray-500 text-sm">{footerLinks.copyright}</p>
-            <div className="flex gap-6">
+            <div className="flex gap-4 md:gap-6">
               <a
                 href={footerLinks.privacy}
                 className="text-gray-500 text-sm hover:text-cyan-400 transition-colors"

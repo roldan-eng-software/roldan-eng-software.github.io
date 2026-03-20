@@ -55,10 +55,10 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
         </svg>
       </motion.div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -67,7 +67,7 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
+            className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -76,13 +76,13 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <motion.button
-              className="btn btn-primary btn-lg px-8"
+              className="btn btn-primary btn-lg px-6 md:px-8 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onStartProject}
@@ -90,7 +90,7 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
               Iniciar Projeto
             </motion.button>
             <motion.button
-              className="btn btn-outline btn-lg px-8 text-white border-white hover:bg-white hover:text-slate-900"
+              className="btn btn-outline btn-lg px-6 md:px-8 w-full sm:w-auto text-white border-white hover:bg-white hover:text-slate-900"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onViewPortfolio}
@@ -100,37 +100,37 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 lg:gap-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div
               ref={yearsCounter.ref}
-              className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+              className="text-center p-3 md:p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
             >
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400">
                 {yearsCounter.value}
               </div>
-              <div className="text-sm md:text-base text-gray-400 mt-1">Anos</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1">Anos</div>
             </div>
             <div
               ref={projectsCounter.ref}
-              className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+              className="text-center p-3 md:p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
             >
-              <div className="text-3xl md:text-4xl font-bold text-purple-400">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-400">
                 {projectsCounter.value}
               </div>
-              <div className="text-sm md:text-base text-gray-400 mt-1">Projetos</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1">Projetos</div>
             </div>
             <div
               ref={successCounter.ref}
-              className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+              className="text-center p-3 md:p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
             >
-              <div className="text-3xl md:text-4xl font-bold text-green-400">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400">
                 {successCounter.value}
               </div>
-              <div className="text-sm md:text-base text-gray-400 mt-1">Sucesso</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1">Sucesso</div>
             </div>
           </motion.div>
         </div>

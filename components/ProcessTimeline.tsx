@@ -10,13 +10,13 @@ export default function ProcessTimeline() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' })
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-slate-900">
+    <section ref={sectionRef} className="py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8 bg-slate-900">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center text-white mb-4"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-4"
         >
           Como Trabalho
         </motion.h2>
@@ -26,7 +26,7 @@ export default function ProcessTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-gray-400 text-center mb-12 max-w-2xl mx-auto"
+          className="text-gray-400 text-center mb-8 md:mb-12 max-w-2xl mx-auto"
         >
           Processo transparente do início ao fim. Você sempre sabe o que está acontecendo.
         </motion.p>
@@ -61,15 +61,24 @@ export default function ProcessTimeline() {
             </defs>
           </svg>
 
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-4 gap-4 md:gap-6">
             {phases.map((phase, index) => (
               <PhaseCard key={phase.id} phase={phase} index={index} />
             ))}
           </div>
         </div>
 
-        {/* Mobile/Tablet Layout */}
-        <div className="lg:hidden space-y-6">
+        {/* Tablet Layout - 2x2 Grid */}
+        <div className="hidden md:block lg:hidden">
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
+            {phases.map((phase, index) => (
+              <PhaseCard key={phase.id} phase={phase} index={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-4 md:space-y-6">
           {phases.map((phase, index) => (
             <PhaseCard key={phase.id} phase={phase} index={index} />
           ))}
