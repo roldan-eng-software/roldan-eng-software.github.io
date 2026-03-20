@@ -1,0 +1,14 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937"/>
+      <stop offset="100%" style="stop-color:#374151"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad)"/>
+  <text x="50%" y="50%" fill="#fff" font-family="system-ui" font-size="24" text-anchor="middle" dy=".3em">Internal System</text>
+  <rect x="100" y="120" width="250" height="30" rx="4" fill="#06b6d4" opacity="0.4"/>
+  <rect x="100" y="170" width="200" height="30" rx="4" fill="#8b5cf6" opacity="0.4"/>
+  <rect x="100" y="220" width="280" height="30" rx="4" fill="#10b981" opacity="0.4"/>
+  <rect x="450" y="120" width="200" height="150" rx="8" fill="#fff" opacity="0.1"/>
+</svg>
