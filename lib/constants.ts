@@ -1,0 +1,516 @@
+export interface TechCardData {
+  id: string
+  name: string
+  icon: string
+  front: string
+  back: string
+}
+
+export interface TechSection {
+  id: string
+  title: string
+  cards: TechCardData[]
+}
+
+export const techStack: TechSection[] = [
+  {
+    id: 'frontend',
+    title: 'Frontend Stack',
+    cards: [
+      {
+        id: 'nextjs',
+        name: 'Next.js',
+        icon: '⚡',
+        front: 'Next.js',
+        back: 'Server Components | App Router | Performance',
+      },
+      {
+        id: 'tailwind',
+        name: 'TailwindCSS',
+        icon: '🎨',
+        front: 'TailwindCSS',
+        back: 'Utility-first | 70% CSS reduzido',
+      },
+      {
+        id: 'daisyui',
+        name: 'DaisyUI',
+        icon: '🌼',
+        front: 'DaisyUI',
+        back: 'Components prontos | Acessibilidade',
+      },
+      {
+        id: 'typescript',
+        name: 'TypeScript',
+        icon: '🔷',
+        front: 'TypeScript',
+        back: 'Type safety | 0 runtime errors',
+      },
+    ],
+  },
+  {
+    id: 'backend',
+    title: 'Backend Stack',
+    cards: [
+      {
+        id: 'nodejs',
+        name: 'Node.js',
+        icon: '🟢',
+        front: 'Node.js/Express',
+        back: 'APIs rápidas',
+      },
+      {
+        id: 'python',
+        name: 'Python',
+        icon: '🐍',
+        front: 'Python + FastAPI',
+        back: 'Automação e scraping',
+      },
+      {
+        id: 'rest',
+        name: 'REST APIs',
+        icon: '🔗',
+        front: 'APIs REST',
+        back: 'Padrões modernos',
+      },
+      {
+        id: 'graphql',
+        name: 'GraphQL',
+        icon: '◈',
+        front: 'GraphQL',
+        back: 'Quando escalabilidade crítica',
+      },
+    ],
+  },
+  {
+    id: 'data',
+    title: 'Data & Infrastructure',
+    cards: [
+      {
+        id: 'neon',
+        name: 'Neon',
+        icon: '💜',
+        front: 'Neon',
+        back: 'Serverless Postgres | Autoscaling',
+      },
+      {
+        id: 'supabase',
+        name: 'Supabase',
+        icon: '🔶',
+        front: 'Supabase',
+        back: 'Postgres + Auth + Real-time',
+      },
+      {
+        id: 'mongodb',
+        name: 'MongoDB',
+        icon: '🍃',
+        front: 'MongoDB',
+        back: 'NoSQL quando necessário',
+      },
+      {
+        id: 'redis',
+        name: 'Redis',
+        icon: '🔴',
+        front: 'Redis',
+        back: 'Cache e sessions',
+      },
+    ],
+  },
+  {
+    id: 'devops',
+    title: 'DevOps & Deployment',
+    cards: [
+      {
+        id: 'docker',
+        name: 'Docker',
+        icon: '🐳',
+        front: 'Docker',
+        back: 'Containerização | Multi-stage builds',
+      },
+      {
+        id: 'github-actions',
+        name: 'GitHub Actions',
+        icon: '⚙️',
+        front: 'GitHub Actions',
+        back: 'CI/CD automático',
+      },
+      {
+        id: 'vercel',
+        name: 'Vercel',
+        icon: '▲',
+        front: 'Vercel',
+        back: 'Deploy Next.js em 30s',
+      },
+      {
+        id: 'aws',
+        name: 'AWS',
+        icon: '☁️',
+        front: 'AWS',
+        back: 'Para infraestrutura complexa',
+      },
+    ],
+  },
+]
+
+export interface Phase {
+  id: string
+  title: string
+  icon: string
+  description: string
+  activities: string[]
+  color: 'primary' | 'secondary' | 'accent' | 'success'
+  duration: string
+  animation?: 'rotate' | 'pulse' | 'float'
+}
+
+export const phases: Phase[] = [
+  {
+    id: 'scope',
+    title: 'Escopo',
+    icon: '📋',
+    description: 'Entender seu problema, não vender solução',
+    activities: ['Reuniões discovery', 'Documento com escopo', 'Aprovação'],
+    color: 'primary',
+    duration: 'Semana 1',
+  },
+  {
+    id: 'development',
+    title: 'Desenvolvimento',
+    icon: '⚙️',
+    description: 'Code com visibilidade',
+    activities: ['Reuniões 2x/semana', 'GitHub commits diários', 'Demo a cada 2w'],
+    color: 'secondary',
+    duration: 'Semanas 2-N',
+    animation: 'rotate',
+  },
+  {
+    id: 'deploy',
+    title: 'Deploy & QA',
+    icon: '🚀',
+    description: 'Levar para produção com confiança',
+    activities: ['Testing completo', 'Documentação', 'Treinamento'],
+    color: 'accent',
+    duration: 'Última semana',
+    animation: 'float',
+  },
+  {
+    id: 'support',
+    title: 'Suporte',
+    icon: '🛡️',
+    description: 'Não abandono o projeto',
+    activities: ['30 dias suporte', 'Opção retainer', 'Updates'],
+    color: 'success',
+    duration: 'Pós-launch',
+    animation: 'pulse',
+  },
+]
+
+export interface CaseMetric {
+  value: string
+  label: string
+}
+
+export interface CaseStudy {
+  id: string
+  title: string
+  description: string
+  image: string
+  technologies: string[]
+  metrics: CaseMetric[]
+}
+
+export const cases: CaseStudy[] = [
+  {
+    id: 'ecommerce',
+    title: 'Loja Online + Integração de Estoque',
+    description:
+      'E-commerce Next.js com integração automática de inventário via API. Redução de 80% em erros de overselling.',
+    image: '/images/cases/ecommerce.png',
+    technologies: ['Next.js', 'Neon', 'Stripe', 'Python'],
+    metrics: [
+      { value: '2.5s', label: 'LCP' },
+      { value: '98', label: 'Lighthouse' },
+      { value: '$50k', label: 'Vendas/mês' },
+    ],
+  },
+  {
+    id: 'scraper',
+    title: 'Scraper de Preços + Dashboard Automático',
+    description:
+      'Sistema Python que raspa 1000+ produtos diariamente de competitors, alimenta dashboard em tempo real.',
+    image: '/images/cases/scraper.png',
+    technologies: ['Python', 'FastAPI', 'Neon', 'Next.js'],
+    metrics: [
+      { value: '10k+', label: 'Dados/dia' },
+      { value: '100%', label: 'Uptime' },
+      { value: '15%', label: 'Economia' },
+    ],
+  },
+  {
+    id: 'saas',
+    title: 'Plataforma SaaS Multi-tenant',
+    description:
+      'Sistema completo de gestão com autenticação OAuth, Stripe, multi-idioma. Deploy em 30s via Vercel.',
+    image: '/images/cases/saas.png',
+    technologies: ['Next.js', 'Docker', 'Supabase', 'FastAPI'],
+    metrics: [
+      { value: '500+', label: 'Usuários' },
+      { value: '99.9%', label: 'Uptime' },
+      { value: '1k→5k', label: 'req/dia' },
+    ],
+  },
+  {
+    id: 'internal',
+    title: 'Sistema de Gestão Interna',
+    description:
+      'Plataforma interna com relatórios avançados, permissões granulares, integração com sistemas legados.',
+    image: '/images/cases/internal.png',
+    technologies: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL'],
+    metrics: [
+      { value: '40h', label: 'salvas/sem' },
+      { value: '8 sem', label: 'Timeline' },
+      { value: '200+', label: 'Relatórios' },
+    ],
+  },
+]
+
+export type DifferentialAnimation = 'connections' | 'bots' | 'chart'
+
+export interface Differential {
+  id: string
+  icon: string
+  headline: string
+  description: string
+  proof: string
+  animation: DifferentialAnimation
+  accentColor: string
+}
+
+export const differentials: Differential[] = [
+  {
+    id: 'fullstack',
+    icon: '🏗️',
+    headline: 'Não apenas Frontend',
+    description:
+      'Você recebe developer que domina stack inteira: Next.js no frontend, Python + FastAPI no backend, Docker na infraestrutura, Neon no banco. Sem "não sei disso, precisa contratar outro".',
+    proof: '8+ anos entregando full-stack',
+    animation: 'connections',
+    accentColor: 'cyan',
+  },
+  {
+    id: 'automation',
+    icon: '🤖',
+    headline: 'Você quer economizar 40h/semana?',
+    description:
+      'Python + FastAPI + scheduled tasks. Raspo, processo, automatizo. Poucos developers oferecem isso. Projeto que custa R$ 8k em manual fica R$ 2k automatizado.',
+    proof: '4 scraping systems em produção',
+    animation: 'bots',
+    accentColor: 'purple',
+  },
+  {
+    id: 'deploy',
+    icon: '📈',
+    headline: 'Seu app não cai quando cresce',
+    description:
+      'Docker, CI/CD automático, serverless onde faz sentido. App pode crescer de 10 para 100k usuários sem você pensar em infraestrutura.',
+    proof: 'Escalou cliente de 1k para 500k requisições/mês em 6 meses',
+    animation: 'chart',
+    accentColor: 'green',
+  },
+]
+
+export interface PricingTier {
+  id: string
+  name: string
+  description: string
+  price: number
+  priceSuffix: string
+  currency: string
+  period: string
+  featured: boolean
+  badge?: string
+  features: string[]
+  cta: string
+  ctaLink?: string
+}
+
+export const pricingTiers: PricingTier[] = [
+  {
+    id: 'hourly',
+    name: 'Horário',
+    description: 'Consultoria & Pequenos Ajustes',
+    price: 150,
+    priceSuffix: '',
+    currency: 'BRL',
+    period: 'hora',
+    featured: false,
+    features: [
+      '1h consultoria = 0.5h cobrado',
+      'Reunião de escopo',
+      'Código comentado',
+      'Suporte 30 dias',
+    ],
+    cta: 'Agendar 30min',
+  },
+  {
+    id: 'fixed',
+    name: 'Projeto Fixo',
+    description: 'Projeto Novo ou Feature Complexa',
+    price: 8000,
+    priceSuffix: '+',
+    currency: 'BRL',
+    period: 'projeto',
+    featured: true,
+    badge: 'MAIS POPULAR',
+    features: [
+      'Escopo claro',
+      'Timeline definida',
+      'Demos 2x/semana',
+      'Suporte 90 dias',
+      'Documentação completa',
+    ],
+    cta: 'Conversar sobre projeto',
+  },
+  {
+    id: 'retainer',
+    name: 'Retainer',
+    description: 'Desenvolvimento Contínuo',
+    price: 6000,
+    priceSuffix: '',
+    currency: 'BRL',
+    period: 'mês',
+    featured: false,
+    badge: 'MELHOR VALOR',
+    features: [
+      '40h/mês dedicadas',
+      'Prioridade máxima',
+      'Reunião semanal',
+      'Backlog contínuo',
+      'Deploy automático',
+    ],
+    cta: 'Proposta de retainer',
+  },
+]
+
+export interface InfraTech {
+  id: string
+  name: string
+  description: string
+  category: 'database' | 'messaging' | 'monitoring' | 'infrastructure'
+}
+
+export const infrastructureStack: InfraTech[] = [
+  {
+    id: 'neon',
+    name: 'Neon',
+    description: 'Serverless Postgres | Autoscaling automático',
+    category: 'database',
+  },
+  {
+    id: 'supabase',
+    name: 'Supabase',
+    description: 'Postgres + Auth + Real-time',
+    category: 'database',
+  },
+  {
+    id: 'bull',
+    name: 'Bull Queue',
+    description: 'Job processing confiável',
+    category: 'messaging',
+  },
+  {
+    id: 'celery',
+    name: 'Python Celery',
+    description: 'Para heavy tasks',
+    category: 'messaging',
+  },
+  {
+    id: 'vercel-analytics',
+    name: 'Vercel Analytics',
+    description: 'Web performance real',
+    category: 'monitoring',
+  },
+  {
+    id: 'sentry',
+    name: 'Sentry',
+    description: 'Error tracking automático',
+    category: 'monitoring',
+  },
+  {
+    id: 'github-actions',
+    name: 'GitHub Actions',
+    description: 'CI/CD sem vendor lock-in',
+    category: 'infrastructure',
+  },
+  {
+    id: 'docker-compose',
+    name: 'Docker Compose',
+    description: 'Local dev idêntico à produção',
+    category: 'infrastructure',
+  },
+]
+
+export interface Testimonial {
+  id: string
+  quote: string
+  author: string
+  role: string
+  company: string
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    id: 'testimonial-1',
+    quote: 'Entregou 2 semanas antes do prazo',
+    author: 'João Silva',
+    role: 'CEO',
+    company: 'Startup X',
+  },
+  {
+    id: 'testimonial-2',
+    quote: 'Melhor developer que já contratei',
+    author: 'Maria Santos',
+    role: 'Founder',
+    company: 'SaaS Y',
+  },
+  {
+    id: 'testimonial-3',
+    quote: 'Economia real, código de qualidade',
+    author: 'Pedro Costa',
+    role: 'CTO',
+    company: 'PME Z',
+  },
+]
+
+export interface SocialLink {
+  id: string
+  name: string
+  url: string
+  icon: string
+}
+
+export const socialLinks: SocialLink[] = [
+  {
+    id: 'github',
+    name: 'GitHub',
+    url: 'https://github.com/seu-username',
+    icon: 'github',
+  },
+  {
+    id: 'linkedin',
+    name: 'LinkedIn',
+    url: 'https://linkedin.com/in/seu-username',
+    icon: 'linkedin',
+  },
+  {
+    id: 'email',
+    name: 'Email',
+    url: 'mailto:seu-email@example.com',
+    icon: 'email',
+  },
+]
+
+export const footerLinks = {
+  copyright: '© 2026 Sandro Roldan',
+  privacy: '/privacy',
+  terms: '/terms',
+}
