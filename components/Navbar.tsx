@@ -60,11 +60,11 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: isVisible ? 0 : -100 }}
         transition={{ duration: 0.3 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-x-hidden ${
+        className={`fixed top-0 left-0 right-0 z-50 overflow-x-hidden transition-all duration-300 ${
           hasScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/80 backdrop-blur-sm'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8  w-full box-border">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 overflow-x-hidden">
           <nav className="flex items-center justify-between h-14 md:h-16">
             <a href="#" className="text-xl md:text-2xl font-bold text-slate-900">
               Roldan Eng Software
