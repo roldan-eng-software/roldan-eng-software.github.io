@@ -82,7 +82,7 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <motion.button
-              className="btn btn-primary btn-lg px-6 md:px-8 w-full sm:w-auto"
+              className="btn btn-primary btn-lg px-6 md:px-8 w-full sm:w-auto touch-manipulation"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onStartProject}
@@ -90,7 +90,7 @@ export default function Hero({ onStartProject, onViewPortfolio }: HeroProps) {
               Iniciar Projeto
             </motion.button>
             <motion.button
-              className="btn btn-outline btn-lg px-6 md:px-8 w-full sm:w-auto text-white border-white hover:bg-white hover:text-slate-900"
+              className="btn btn-outline btn-lg px-6 md:px-8 w-full sm:w-auto text-white border-white hover:bg-white hover:text-slate-900 touch-manipulation"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onViewPortfolio}

@@ -20,7 +20,7 @@ export default function FlipCard({ card, index }: FlipCardProps) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -4 }}
       onClick={() => setIsFlipped(!isFlipped)}
-      className="cursor-pointer perspective-1000"
+      className="cursor-pointer perspective-1000 touch-manipulation"
       style={{ perspective: '1000px' }}
     >
       <motion.div

@@ -87,7 +87,7 @@ export default function PhaseCard({ phase, index }: PhaseCardProps) {
           <p className={`text-sm ${colors.text} mb-4`}>{phase.description}</p>
 
           <button
-            className={`text-xs ${colors.text} hover:underline`}
+            className={`text-xs ${colors.text} hover:underline touch-manipulation`}
             onClick={e => {
               e.stopPropagation()
               setIsExpanded(!isExpanded)

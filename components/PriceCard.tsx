@@ -59,7 +59,7 @@ export default function PriceCard({ tier, index }: PriceCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8 }}
-      className={`relative ${tier.featured ? 'md:-mt-4 md:mb-[-16px]' : ''}`}
+      className={`relative ${tier.featured ? 'lg:-mt-4 lg:mb-[-16px]' : ''}`}
     >
       {tier.featured && (
         <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-30" />
@@ -140,7 +140,7 @@ export default function PriceCard({ tier, index }: PriceCardProps) {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className={`w-full py-3 rounded-lg font-semibold text-sm transition-all duration-300 ${
+            className={`w-full py-3 rounded-lg font-semibold text-sm transition-all duration-300 touch-manipulation ${
               tier.featured
                 ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'
                 : 'bg-slate-700 text-white hover:bg-slate-600'

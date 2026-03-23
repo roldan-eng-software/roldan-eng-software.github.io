@@ -298,7 +298,7 @@ export default function DifferentialCard({ differential, index }: DifferentialCa
         {/* Expand Button */}
         <motion.button
           whileTap={{ scale: 0.95 }}
-          className={`w-full py-3 rounded-lg ${colors.button} text-white font-semibold text-sm transition-colors`}
+          className={`w-full py-3 rounded-lg ${colors.button} text-white font-semibold text-sm transition-colors touch-manipulation`}
           onClick={e => {
             e.stopPropagation()
             setIsExpanded(!isExpanded)

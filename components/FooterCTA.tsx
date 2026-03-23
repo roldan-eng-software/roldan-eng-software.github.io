@@ -124,7 +124,7 @@ export default function FooterCTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 touch-manipulation"
             >
               Agendar Reunião
             </motion.a>
@@ -132,7 +132,7 @@ export default function FooterCTA() {
               href="mailto:roldan.eng.software@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 md:px-8 py-3 md:py-4 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
+              className="px-6 md:px-8 py-3 md:py-4 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 hover:border-slate-600 transition-all duration-300 touch-manipulation"
             >
               Enviar Email
             </motion.a>
@@ -174,7 +174,7 @@ export default function FooterCTA() {
                 aria-label={link.name}
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-10 md:w-11 h-10 md:h-11 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-500/50 hover:bg-slate-700 transition-all duration-300"
+                className="w-10 md:w-11 h-10 md:h-11 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-cyan-500/50 hover:bg-slate-700 transition-all duration-300 touch-manipulation"
               >
                 <SocialIcon icon={link.icon} />
               </motion.a>

@@ -41,6 +41,9 @@ module.exports = {
         'gap-tablet': '1.5rem',
         'gap-desktop': '2rem',
       },
+      minHeight: {
+        'safe-screen': 'calc(100vh - env(safe-area-inset-bottom, 0px))',
+      },
     },
   },
   plugins: [require('daisyui')],
