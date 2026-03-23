@@ -64,8 +64,8 @@ export default function Navbar() {
           hasScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/80 backdrop-blur-sm'
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14 md:h-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <nav className="flex items-center justify-between h-14 md:h-16">
             <a href="#" className="text-xl md:text-2xl font-bold text-slate-900">
               Sandro
             </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 -mr-2 text-slate-600 hover:text-slate-900 touch-manipulation"
+              className="md:hidden p-2 text-slate-600 hover:text-slate-900 touch-manipulation"
               aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={isOpen}
             >
@@ -120,8 +120,8 @@ export default function Navbar() {
                 />
               </div>
             </button>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </motion.header>
 
       {/* Mobile Menu */}
