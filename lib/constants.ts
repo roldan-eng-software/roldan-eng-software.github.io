@@ -214,6 +214,7 @@ export interface CaseStudy {
   title: string
   description: string
   image: string
+  url: string
   technologies: string[]
   metrics: CaseMetric[]
 }
@@ -225,6 +226,7 @@ export const cases: CaseStudy[] = [
     description:
       'Sistema de micro-SaaS para busca e oferta de serviços, painel admin e deploy em Vercel.',
     image: '/images/cases/Case_1.png',
+    url: 'https://www.meubairro.dev.br/',
     technologies: ['Next.js', 'Neon', 'Supabase', 'Python'],
     metrics: [
       { value: '2.5s', label: 'LCP' },
@@ -234,10 +236,11 @@ export const cases: CaseStudy[] = [
   },
   {
     id: 'scraper',
-    title: 'Scraper de Preços + Dashboard Automático',
+    title: 'Encurtador de links com dashboard',
     description:
-      'Sistema Python que raspa 1000+ produtos diariamente de competitors, alimenta dashboard em tempo real.',
-    image: '/images/cases/scraper.png',
+      'Sistema de encurtador de links com dashboard, integrado com Google Analytics e Stripe.',
+    image: '/images/cases/Case_2.png',
+    url: 'https://www.urlencurta.com.br/',
     technologies: ['Python', 'FastAPI', 'Neon', 'Next.js'],
     metrics: [
       { value: '10k+', label: 'Dados/dia' },
@@ -247,28 +250,16 @@ export const cases: CaseStudy[] = [
   },
   {
     id: 'saas',
-    title: 'Plataforma SaaS Multi-tenant',
+    title: 'Gerenciador de clinica de Psicologia',
     description:
-      'Sistema completo de gestão com autenticação OAuth, Stripe, multi-idioma. Deploy em 30s via Vercel.',
-    image: '/images/cases/saas.png',
+      'Sistema completo de gestão para clinicas de psicologia com autenticação OAuth e calendário.',
+    image: '/images/cases/Case_03.png',
+    url: 'https://clinica-mente.vercel.app/',
     technologies: ['Next.js', 'Docker', 'Supabase', 'FastAPI'],
     metrics: [
       { value: '500+', label: 'Usuários' },
       { value: '99.9%', label: 'Uptime' },
       { value: '1k→5k', label: 'req/dia' },
-    ],
-  },
-  {
-    id: 'internal',
-    title: 'Sistema de Gestão Interna',
-    description:
-      'Plataforma interna com relatórios avançados, permissões granulares, integração com sistemas legados.',
-    image: '/images/cases/internal.png',
-    technologies: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL'],
-    metrics: [
-      { value: '40h', label: 'salvas/sem' },
-      { value: '8 sem', label: 'Timeline' },
-      { value: '200+', label: 'Relatórios' },
     ],
   },
 ]

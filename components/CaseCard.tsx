@@ -71,13 +71,16 @@ export default function CaseCard({ caseStudy, index }: CaseCardProps) {
             </div>
 
             {/* CTA */}
-            <motion.button
+            <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/25 transition-shadow touch-manipulation"
+              href={caseStudy.url}
+              target="_blank"
+              rel="noreferrer"
+              className="block w-full py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold text-sm text-center hover:shadow-lg hover:shadow-cyan-500/25 transition-shadow touch-manipulation"
             >
               Ver Case Completo
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </div>
