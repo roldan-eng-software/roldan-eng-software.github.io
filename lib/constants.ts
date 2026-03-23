@@ -221,15 +221,15 @@ export interface CaseStudy {
 export const cases: CaseStudy[] = [
   {
     id: 'ecommerce',
-    title: 'Loja Online + Integração de Estoque',
+    title: 'Micro-SaaS de oferta de serviços',
     description:
-      'E-commerce Next.js com integração automática de inventário via API. Redução de 80% em erros de overselling.',
-    image: '/images/cases/ecommerce.png',
-    technologies: ['Next.js', 'Neon', 'Stripe', 'Python'],
+      'Sistema de micro-SaaS para busca e oferta de serviços, painel admin e deploy em Vercel.',
+    image: '/images/cases/Case_1.png',
+    technologies: ['Next.js', 'Neon', 'Supabase', 'Python'],
     metrics: [
       { value: '2.5s', label: 'LCP' },
       { value: '98', label: 'Lighthouse' },
-      { value: '$50k', label: 'Vendas/mês' },
+      { value: '$5k', label: 'Vendas/mês' },
     ],
   },
   {
