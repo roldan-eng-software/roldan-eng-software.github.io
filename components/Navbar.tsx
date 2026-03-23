@@ -64,10 +64,10 @@ export default function Navbar() {
           hasScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/80 backdrop-blur-sm'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8  w-full box-border">
           <nav className="flex items-center justify-between h-14 md:h-16">
             <a href="#" className="text-xl md:text-2xl font-bold text-slate-900">
-              Sandro
+              Roldan Eng Software
             </a>
 
             {/* Desktop Menu */}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
-                Agendar
+                Agendar Reunião
               </a>
             </div>
 
