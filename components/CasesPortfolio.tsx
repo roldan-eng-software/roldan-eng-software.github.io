@@ -12,7 +12,7 @@ export default function CasesPortfolio() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-4"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-lime-600 mb-4"
         >
           Casos de Sucesso
         </motion.h2>

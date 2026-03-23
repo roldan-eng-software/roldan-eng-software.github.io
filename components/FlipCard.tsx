@@ -36,7 +36,7 @@ export default function FlipCard({ card, index }: FlipCardProps) {
           <span className="text-4xl mb-3" role="img" aria-label={card.name}>
             {card.icon}
           </span>
-          <h3 className="text-lg font-semibold text-white text-center">{card.front}</h3>
+          <h3 className="text-lg font-semibold text-white  text-center">{card.front}</h3>
         </div>
 
         <div
