@@ -492,25 +492,36 @@ export const socialLinks: SocialLink[] = [
   {
     id: 'github',
     name: 'GitHub',
-    url: 'https://github.com/seu-username',
+    url: 'https://github.com/roldan-eng-software',
     icon: 'github',
   },
   {
     id: 'linkedin',
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/seu-username',
+    url: 'https://www.linkedin.com/in/sandro-roldan-b8721a3b5/',
     icon: 'linkedin',
+  },
+  {
+    id: 'whatsapp',
+    name: 'WhatsApp',
+    url: 'https://wa.me/5516981442301',
+    icon: 'whatsapp',
   },
   {
     id: 'email',
     name: 'Email',
-    url: 'mailto:seu-email@example.com',
+    url: 'mailto:roldan.eng.software@gmail.com',
     icon: 'email',
   },
 ]
 
 export const footerLinks = {
-  copyright: '© 2026 Sandro Roldan',
+  copyright: '© 2026 Sandro Roldan - Desenvolvedor Full-Stack',
   privacy: '/privacy',
   terms: '/terms',
+  quickLinks: [
+    { name: 'Home', url: '/', label: 'Início - Portfólio Desenvolvedor' },
+    { name: 'Projetos', url: '#projetos', label: 'Projetos Desenvolvidos' },
+    { name: 'Contato', url: '#contato', label: 'Fale Conosco' },
+  ],
 }
