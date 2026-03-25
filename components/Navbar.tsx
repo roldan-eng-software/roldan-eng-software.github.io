@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { meetingLink } from '@/lib/constants'
 
 const navLinks = [
   { name: 'Home', href: '#hero' },
@@ -86,7 +87,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden md:block">
               <a
-                href="https://calendly.com/seu-username"
+                href={meetingLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -146,7 +147,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="https://calendly.com/seu-username"
+                href={meetingLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleLinkClick}

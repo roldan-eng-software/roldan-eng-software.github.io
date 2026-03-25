@@ -137,17 +137,34 @@ export default function PriceCard({ tier, index }: PriceCardProps) {
             ))}
           </ul>
 
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className={`w-full py-3 rounded-lg font-semibold text-sm transition-all duration-300 touch-manipulation ${
-              tier.featured
-                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'
-                : 'bg-slate-700 text-white hover:bg-slate-600'
-            }`}
-          >
-            {tier.cta}
-          </motion.button>
+          {tier.ctaLink ? (
+            <motion.a
+              href={tier.ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className={`block w-full py-3 rounded-lg font-semibold text-sm text-center transition-all duration-300 touch-manipulation ${
+                tier.featured
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'
+                  : 'bg-slate-700 text-white hover:bg-slate-600'
+              }`}
+            >
+              {tier.cta}
+            </motion.a>
+          ) : (
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className={`w-full py-3 rounded-lg font-semibold text-sm transition-all duration-300 touch-manipulation ${
+                tier.featured
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'
+                  : 'bg-slate-700 text-white hover:bg-slate-600'
+              }`}
+            >
+              {tier.cta}
+            </motion.button>
+          )}
         </div>
       </div>
     </motion.div>

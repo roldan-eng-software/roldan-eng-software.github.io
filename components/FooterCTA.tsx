@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { testimonials, socialLinks, footerLinks } from '@/lib/constants'
+import { testimonials, socialLinks, footerLinks, meetingLink } from '@/lib/constants'
 
 interface TestimonialCardProps {
   testimonial: (typeof testimonials)[0]
@@ -119,7 +119,7 @@ export default function FooterCTA() {
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <motion.a
-              href="https://calendly.com/roldan-eng-software"
+              href={meetingLink}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

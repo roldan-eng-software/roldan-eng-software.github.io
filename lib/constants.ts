@@ -338,23 +338,26 @@ export interface PricingTier {
   ctaLink?: string
 }
 
+export const meetingLink = 'https://calendly.com/roldan-eng-software'
+
 export const pricingTiers: PricingTier[] = [
   {
     id: 'hourly',
     name: 'Horário',
     description: 'Consultoria & Pequenos Ajustes',
-    price: 150,
-    priceSuffix: '',
+    price: 100,
+    priceSuffix: '125',
     currency: 'BRL',
     period: 'hora',
     featured: false,
     features: [
-      '1h consultoria = 0.5h cobrado',
+      '1h consultoria',
       'Reunião de escopo',
       'Código comentado',
-      'Suporte 30 dias',
+      'Suporte 7 dias',
     ],
     cta: 'Agendar 30min',
+    ctaLink: meetingLink,
   },
   {
     id: 'fixed',
