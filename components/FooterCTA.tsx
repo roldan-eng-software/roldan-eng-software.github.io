@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { testimonials, socialLinks, footerLinks, meetingLink } from '@/lib/constants'
+import { testimonials, socialLinks, footerLinks, meetingLink, emailLink } from '@/lib/constants'
 
 interface TestimonialCardProps {
   testimonial: (typeof testimonials)[0]
@@ -129,7 +129,7 @@ export default function FooterCTA() {
               Agendar Reunião
             </motion.a>
             <motion.a
-              href="mailto:roldan.eng.software@gmail.com"
+              href={emailLink}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 md:px-8 py-3 md:py-4 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 hover:border-slate-600 transition-all duration-300 touch-manipulation"

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import PriceCard from './PriceCard'
-import { pricingTiers } from '@/lib/constants'
+import { pricingTiers, emailLink } from '@/lib/constants'
 
 export default function PricingCards() {
   return (
@@ -41,7 +41,7 @@ export default function PricingCards() {
           className="text-center text-gray-500 text-sm mt-6 md:mt-8"
         >
           Precisa de algo diferente?{' '}
-          <a href="#contact" className="text-cyan-400 hover:underline">
+          <a href={emailLink} className="text-cyan-400 hover:underline">
             Vamos conversar
           </a>
         </motion.p>

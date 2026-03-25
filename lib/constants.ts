@@ -339,6 +339,7 @@ export interface PricingTier {
 }
 
 export const meetingLink = 'https://calendly.com/roldan-eng-software'
+export const emailLink = 'mailto:roldan.eng.software@gmail.com'
 
 export const pricingTiers: PricingTier[] = [
   {
@@ -377,6 +378,7 @@ export const pricingTiers: PricingTier[] = [
       'Documentação completa',
     ],
     cta: 'Conversar sobre projeto',
+    ctaLink: emailLink,
   },
   {
     id: 'retainer',
