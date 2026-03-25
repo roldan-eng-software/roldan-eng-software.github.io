@@ -347,7 +347,7 @@ export const pricingTiers: PricingTier[] = [
     name: 'Horário',
     description: 'Consultoria & Pequenos Ajustes',
     price: 100,
-    priceSuffix: '125',
+    priceSuffix: '',
     currency: 'BRL',
     period: 'hora',
     featured: false,
