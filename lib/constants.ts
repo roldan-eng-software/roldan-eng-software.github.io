@@ -236,7 +236,7 @@ export const cases: CaseStudy[] = [
   },
   {
     id: 'ecommerce',
-    title: 'E-commerce completo para vendas online',
+    title: 'E-commerce completo para vendas',
     description:
       'conexão com mercado pago, pagamentos e envios, painel admin e deploy em Vercel.',
     image: '/images/cases/Case_4.png',
