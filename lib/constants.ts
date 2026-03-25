@@ -221,7 +221,7 @@ export interface CaseStudy {
 
 export const cases: CaseStudy[] = [
   {
-    id: 'ecommerce',
+    id: 'microsaas',
     title: 'Micro-SaaS de oferta de serviços',
     description:
       'Sistema de micro-SaaS para busca e oferta de serviços, painel admin e deploy em Vercel.',
@@ -232,6 +232,20 @@ export const cases: CaseStudy[] = [
       { value: '2.5s', label: 'LCP' },
       { value: '98', label: 'Lighthouse' },
       { value: '$5k', label: 'Vendas/mês' },
+    ],
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-commerce completo para vendas online',
+    description:
+      'conexão com mercado pago, pagamentos e envios, painel admin e deploy em Vercel.',
+    image: '/images/cases/Case_4.png',
+    url: 'https://semijoias-three.vercel.app/',
+    technologies: ['Next.js', 'Neon', 'Prisma orm', 'Docker'],
+    metrics: [
+      { value: '10', label: 'LCP' },
+      { value: '98', label: 'Lighthouse' },
+      { value: '$10k', label: 'Vendas/mês' },
     ],
   },
   {
